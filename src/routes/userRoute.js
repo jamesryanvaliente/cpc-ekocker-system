@@ -7,7 +7,7 @@ const loginUser = require('../actions/login');
 const changePassword = require('../actions/changePassword');
 const getUserDashboard = require('../actions/getUserDashboard');
 const authenticateToken = require('../middleware/authentication');
-const rentLocker = require('../actions/rentLocker');
+const lockerTransaction = require('../actions/lockerTransaction');
 
 router.post('/create-account', async(req, res) => 
     {
@@ -45,6 +45,6 @@ router.post('/change-password', authenticateToken, changePassword);
 
 router.get('/dashboard', authenticateToken, getUserDashboard);
 
-router.post('/rent-locker', authenticateToken, rentLocker);
+router.post('/transaction', authenticateToken, lockerTransaction);
 
 module.exports = router;
