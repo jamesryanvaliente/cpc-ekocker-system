@@ -20,6 +20,13 @@ const port = process.env.PORT || 3001;
 
 // const port = 3001;
 
+const cron = require('node-cron');
+const expireReservations = require('./jobs/expireReservations');
+
+// run every minute
+cron.schedule('* * * * *', expireReservations);
+
+
 app.listen(port, () => {
     console.log(`Server is running on port:`, port);
 });

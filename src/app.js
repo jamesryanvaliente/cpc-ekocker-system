@@ -16,4 +16,7 @@ const adminRouter = require('./routes/adminRoute');
 // const { pool } = require('./database/connection');
 app.use('/admin', adminRouter);
 
+const lockerRouter = require('./routes/lockerRoute');
+app.use('/locker', lockerRouter);
+
 module.exports = app;

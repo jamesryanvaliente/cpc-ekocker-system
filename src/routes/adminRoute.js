@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+
 const createUser = require('../actions/createUserByAdmin');
 const getUserByStudId = require('../actions/getUserByStudId');
 const forgotPassword = require('../actions/forgotPassword');
